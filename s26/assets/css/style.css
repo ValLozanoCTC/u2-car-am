@@ -1,0 +1,111 @@
+/* Layout de columnas para inputs en pantallas grandes */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-col {
+  flex: 1;
+}
+
+@media (min-width: 600px) {
+  /* Main */
+  .formulario {
+    width: 500px;
+  }
+  .form-row {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .form-col {
+    min-width: 0;
+  }
+
+  /* Card */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Cuando el campo está en foco */
+input:focus,
+textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.4);
+  outline: none;
+}
+
+/* Campos válidos */
+input:valid,
+textarea:valid {
+  border-color: #16a34a;
+}
+
+/* Campos inválidos */
+input:invalid,
+textarea:invalid {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+/* Botón */
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4338ca;
+}
